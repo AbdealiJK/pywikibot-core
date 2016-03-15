@@ -285,7 +285,11 @@ class IndexPageTestCase(TestCase):
 
     """Run tests related to IndexPage ProofreadPage extension."""
 
-    pass
+    @classmethod
+    @require_modules('bs4')
+    def setUpClass(cls):
+        """Set up test case."""
+        super(TestIndexPageMappings, cls).setUpClass()
 
 
 class TestIndexPageInvalidSite(IndexPageTestCase):
