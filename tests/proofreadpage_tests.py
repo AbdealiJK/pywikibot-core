@@ -430,6 +430,7 @@ class TestIndexPageMappings(IndexPageTestCase):
     }
 
     cached = True
+    user = True
 
     @classmethod
     def setUpClass(cls):
