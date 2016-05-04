@@ -23,7 +23,7 @@ else:
 try:
     from bs4 import BeautifulSoup
 except ImportError as bserror:
-    BeautifulSoup = False
+    BeautifulSoup = bserror
 
 import pywikibot
 from pywikibot.tools import chars
@@ -580,8 +580,8 @@ def html_comparator(compare_string):
     @rtype: dict
     """
     # check if BeautifulSoup imported
-    if not BeautifulSoup:
-        raise bserror  # should have been raised and stored earlier.
+    if isinstance(BeautifulSoup, ImportError):
+        raise BeautifulSoup  # should have been raised and stored earlier.
 
     comparands = {'deleted-context': [], 'added-context': []}
     soup = BeautifulSoup(compare_string)
