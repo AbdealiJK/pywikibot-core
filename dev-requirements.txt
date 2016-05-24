@@ -6,7 +6,6 @@ pytest>=2.8.0
 pytest-timeout
 pytest-runner
 pytest-cov
-pytest-attrib
 
 six
 

@@ -48,6 +48,7 @@ before_install:
     fi
 
 before_script:
+  - pip install --pre -U pytest-attrib
   - pip install -r dev-requirements.txt
 
 script:
