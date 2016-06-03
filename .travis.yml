@@ -126,6 +126,7 @@ env:
     # See http://docs.travis-ci.com/user/encryption-keys/ for more information.
     - secure: kofInMlisiTBt9o/Ustc/vySlkKfxGzGCX2LwA1D2waym8sDTS0o5gMJ5LsrT/BUKwZbe1vLozPHqZrrkQvsdTml+DpZuotzdILs0m0f3BUoexEC6OON5IDljuxFyETrD1Ug44ih5Mc4lVFOdTcBzg501ZmswGwQrBvg/OyEFfE=
     - TEST_TIMEOUT: 300
+    - USE_NOSE: 1
 
   matrix:
     - LANGUAGE=en FAMILY=wikipedia PYWIKIBOT2_TEST_PROD_ONLY=1
